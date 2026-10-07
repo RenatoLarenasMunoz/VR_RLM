@@ -1,0 +1,39 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+interface IInteractable
+{
+    public void Interact();
+}
+
+public class Interactor : MonoBehaviour
+{
+    public Transform interactorSource;
+    public float interactRange;
+
+
+    //private void OnMouseDown()
+    //{
+    //    Interact();
+    //}
+
+    public void OnInteract(InputAction.CallbackContext _ctx)
+    {
+        if (_ctx.started)
+        {
+            Interact();
+        }
+    }
+
+    void Interact()
+    {
+        Ray ray = new Ray(interactorSource.position, interactorSource.forward);
+        if(Physics.Raycast(ray, out RaycastHit hitInfo, interactRange))
+        {
+            if(hitInfo.collider.TryGetComponent(out IInteractable interactable))
+            {
+                interactable.Interact();
+            }
+        }
+    }
+}
