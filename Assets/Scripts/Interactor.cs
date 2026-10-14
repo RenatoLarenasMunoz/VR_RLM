@@ -21,6 +21,7 @@ public class Interactor : MonoBehaviour
     {
         if (_ctx.started)
         {
+            print(_ctx.started);
             Interact();
         }
     }

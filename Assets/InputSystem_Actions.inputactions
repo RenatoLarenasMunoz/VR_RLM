@@ -185,7 +185,7 @@
                     "id": "78c22792-7d51-4a07-91c6-724e41b4d6a1",
                     "path": "<XRController>{LeftHand}/joystick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "NormalizeVector2",
                     "groups": ";XR",
                     "action": "Move",
                     "isComposite": false,
@@ -220,17 +220,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "48f417f3-5ca9-4c4e-9463-d07ce8c20243",
-                    "path": "<XRController>{RightHand}/joystick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false

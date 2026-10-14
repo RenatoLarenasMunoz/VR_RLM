@@ -55,15 +55,19 @@ public class Movement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext _ctx)
     {
         direction = _ctx.ReadValue<Vector2>();
-        if (_ctx.canceled)
+
+        if (!_ctx.performed)
         {
+            direction = Vector2.zero;
             rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
         }
     }
 
     void MovePlayer(Vector2 _direction)
     {
-        moveDirection = orientation.forward * _direction.y + orientation.right * _direction.x;
+        Vector3 orientationForward = new Vector3(orientation.forward.x, 0, orientation.forward.z).normalized;
+        Vector3 orientationRight = new Vector3(orientation.right.x, 0, orientation.right.z).normalized;
+        moveDirection = orientationForward * _direction.y + orientationRight * _direction.x;  
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 
