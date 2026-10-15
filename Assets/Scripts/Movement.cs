@@ -54,9 +54,10 @@ public class Movement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext _ctx)
     {
+        print(_ctx.phase);
         direction = _ctx.ReadValue<Vector2>();
 
-        if (!_ctx.performed)
+        if (_ctx.canceled)
         {
             direction = Vector2.zero;
             rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
