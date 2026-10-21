@@ -21,7 +21,7 @@ public class Interactor : MonoBehaviour
     {
         if (_ctx.started)
         {
-            print(_ctx.started);
+            Debug.Log(_ctx.started);
             Interact();
         }
     }
@@ -33,6 +33,7 @@ public class Interactor : MonoBehaviour
         {
             if(hitInfo.collider.TryGetComponent(out IInteractable interactable))
             {
+                Debug.Log(hitInfo);
                 interactable.Interact();
             }
         }

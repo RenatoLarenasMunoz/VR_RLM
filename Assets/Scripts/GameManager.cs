@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         PlaySFX(1);
     }
 
-    void PlaySFX(int index)
+    public void PlaySFX(int index)
     {
         source.PlayOneShot(clip[index]);
     }
