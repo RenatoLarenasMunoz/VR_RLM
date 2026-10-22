@@ -38,4 +38,10 @@ public class Interactor : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(interactorSource.position, interactorSource.forward * interactRange);
+    }
 }

@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public AudioClip[] clip;
     //public AudioClip[] music;
 
+    public ResetScene resetScene;
+
 
     public bool exitOn;
 
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
         {
             icon.SetActive(false);
         }
+
+        StartCoroutine(resetScene.BlackFadeOut());
     }
 
     public void CollectPiece()
