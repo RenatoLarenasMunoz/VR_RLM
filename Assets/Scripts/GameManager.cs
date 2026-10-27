@@ -1,27 +1,37 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game Elements")]
     public int piecesCollected;
     public Canvas gameCanvas;
     public GameObject[] finishLine;
     public GameObject[] pieceIndicator;
     public GameObject textInstruction;
     public GameObject textEndLevel;
+    public GameObject restartButton;
+    public bool exitOn;
+    
+    [Header("Sound Settings")]
     public AudioSource source;
     public AudioClip[] clip;
     //public AudioClip[] music;
 
+    [Header("Scene Manager Settings")]
     public ResetScene resetScene;
+    public Image imagenFade;
+    public float speedFade;
+    public Scene[] scenes;
 
-
-    public bool exitOn;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        restartButton.SetActive(false);
         exitOn = false;
 
         foreach (GameObject icon in pieceIndicator)
@@ -29,7 +39,7 @@ public class GameManager : MonoBehaviour
             icon.SetActive(false);
         }
 
-        StartCoroutine(resetScene.BlackFadeOut());
+        StartCoroutine(BlackFadeOut());
     }
 
     public void CollectPiece()
@@ -76,12 +86,56 @@ public class GameManager : MonoBehaviour
     {
         textInstruction.SetActive(!textInstruction.activeSelf);
         textEndLevel.SetActive(!textEndLevel.activeSelf);
+        restartButton.SetActive(true);
 
         //PlaySFX(2); // sonido no disponible
     }
 
     public void GameOver()
     {
+        StartCoroutine(BlackFadeIn());
+
         //PlaySFX(3); // sonido no disponible
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene("Level1"); //buscar escena actual para reiniciar el nivel, incompleto
+    }
+
+    public IEnumerator BlackFadeIn()
+    {
+        float elapsedTime = 0;
+
+        while (elapsedTime < 1)
+        {
+            elapsedTime += Time.deltaTime * speedFade;
+
+            float finalAlpha = Mathf.Lerp(0, 1, elapsedTime);
+
+            imagenFade.color = new Color(0, 0, 0, finalAlpha);
+
+            yield return null;
+        }
+
+        ResetLevel();
+    }
+
+    public IEnumerator BlackFadeOut()
+    {
+        float elapsedTime = 0;
+
+        yield return new WaitForSeconds(1f);
+
+        while (elapsedTime < 1)
+        {
+            elapsedTime += Time.deltaTime * speedFade;
+
+            float finalAlpha = Mathf.Lerp(1, 0, elapsedTime);
+
+            imagenFade.color = new Color(0, 0, 0, finalAlpha);
+
+            yield return null;
+        }
     }
 }
