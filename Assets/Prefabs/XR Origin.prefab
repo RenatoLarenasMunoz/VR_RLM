@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01da216e59303d42a172b894f2378bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
-  interactorSource: {fileID: 304767241931758032}
+  interactorSource: {fileID: 376770020982391199}
   interactRange: 10
 --- !u!114 &5334216956344369573
 MonoBehaviour:
@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 4736972110141568125}
   - component: {fileID: 72022338849820205}
   - component: {fileID: 3081983964384033135}
+  - component: {fileID: 8476688705978896474}
   - component: {fileID: 6229000785137541107}
   - component: {fileID: 2181081172704200547}
   - component: {fileID: 1559175194294581204}
@@ -827,6 +828,21 @@ MonoBehaviour:
     m_Bits: 8
   orientation: {fileID: 8386991896380435249}
   xrSchemeName: XR
+--- !u!114 &8476688705978896474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273808143161240633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec227750e31bb742878da81e608216c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseController
+  sensX: 70
+  sensY: 5
+  orientation: {fileID: 7533425529127496072}
 --- !u!54 &6229000785137541107
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -919,7 +935,19 @@ MonoBehaviour:
     m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8476688705978896474}
+        m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+        m_MethodName: OnPoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:

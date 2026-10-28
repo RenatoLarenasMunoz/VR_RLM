@@ -17,8 +17,7 @@ public class MouseController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //HideCursor();
     }
 
     public void OnPoint(InputAction.CallbackContext _ctx)
@@ -29,10 +28,16 @@ public class MouseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraControl();
+        CameraMove();
     }
 
-    void CameraControl()
+    void HideCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void CameraMove()
     {
         float mouseX = direction.x * Time.deltaTime * sensX;
         float mouseY = direction.y * Time.deltaTime * sensY;

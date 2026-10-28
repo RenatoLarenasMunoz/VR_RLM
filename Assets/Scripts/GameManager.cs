@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public ResetScene resetScene;
     public Image imagenFade;
     public float speedFade;
-    public Scene[] scenes;
+    //public Scene[] scenes;
 
 
 

@@ -274,6 +274,17 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 8472489721813142993, guid: 0975ecbdf6b53f84cbdae0ca700ab470, type: 3}
   m_PrefabInstance: {fileID: 6252862754012893100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &377877791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4795388942850411776, guid: 5d9e88cf5e910cb4d8bc66928d4cf5d9, type: 3}
+  m_PrefabInstance: {fileID: 4617666195519013068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!43 &379011698
 Mesh:
   m_ObjectHideFlags: 0
@@ -1279,8 +1290,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
   - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
   resetScene: {fileID: 548319732}
-  imagenFade: {fileID: 0}
-  speedFade: 0
+  imagenFade: {fileID: 377877791}
+  speedFade: 2
 --- !u!82 &1123657368
 AudioSource:
   m_ObjectHideFlags: 0
