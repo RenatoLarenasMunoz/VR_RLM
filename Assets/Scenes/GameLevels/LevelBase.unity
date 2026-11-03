@@ -200,8 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae7e257cbfd5924f930ad43bf52832f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetScene
-  imagenFade: {fileID: 1247830171}
-  speedFade: 2
+  gm: {fileID: 0}
 --- !u!1001 &65613059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 607911024}
+  - component: {fileID: 607911025}
   - component: {fileID: 607911023}
   - component: {fileID: 607911022}
   m_Layer: 0
@@ -408,6 +408,7 @@ MonoBehaviour:
   textInstruction: {fileID: 1247830170}
   textEndLevel: {fileID: 1247830169}
   restartButton: {fileID: 32414306}
+  exitOn: 0
   source: {fileID: 2136846904}
   clip:
   - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
@@ -415,7 +416,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
   - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
   resetScene: {fileID: 32414307}
-  exitOn: 0
+  imagenFade: {fileID: 0}
+  speedFade: 0
 --- !u!4 &607911024
 Transform:
   m_ObjectHideFlags: 0
@@ -431,6 +433,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &607911025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607911021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8377b36ef9369434aad62168d6101649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  gm: {fileID: 607911023}
 --- !u!1 &818809549
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,17 +796,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2048985549522147579, guid: 5d9e88cf5e910cb4d8bc66928d4cf5d9, type: 3}
   m_PrefabInstance: {fileID: 1247830167}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1247830171 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4795388942850411776, guid: 5d9e88cf5e910cb4d8bc66928d4cf5d9, type: 3}
-  m_PrefabInstance: {fileID: 1247830167}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1255363316
 PrefabInstance:
   m_ObjectHideFlags: 0

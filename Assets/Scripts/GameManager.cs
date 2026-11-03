@@ -93,9 +93,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(BlackFadeIn());
-
         //PlaySFX(3); // sonido no disponible
+
+        StartCoroutine(BlackFadeIn());
+        ResetLevel();
     }
 
     public void ResetLevel()
@@ -117,8 +118,6 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
-
-        ResetLevel();
     }
 
     public IEnumerator BlackFadeOut()
