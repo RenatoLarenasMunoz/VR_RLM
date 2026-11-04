@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5932771562443980757, guid: 65d389abd8d5b9a499ef23e7f9092601, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c5712609b80829949bab4aac8a5825aa, type: 2}
     - target: {fileID: 7896579675071220476, guid: 65d389abd8d5b9a499ef23e7f9092601, type: 3}
       propertyPath: m_Name
       value: ResetLevelButton
@@ -2983,10 +2987,10 @@ MonoBehaviour:
   exitOn: 0
   source: {fileID: 2136846904}
   clip:
-  - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
-  - {fileID: 8300000, guid: ca3d3b2346ef0854585e5377a5a9b38a, type: 3}
-  - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
-  - {fileID: 8300000, guid: d2c3e376c2ce555408c17f84f5924445, type: 3}
+  - {fileID: 8300000, guid: da7a0df4b97b0d847a7ae6762f4a328c, type: 3}
+  - {fileID: 8300000, guid: 35fc92408265ad14fab83f38d3459a1a, type: 3}
+  - {fileID: 8300000, guid: b396c45ac550e5341a69286744d62b0d, type: 3}
+  - {fileID: 8300000, guid: f567c49edb9b0f74fb58bb76125d1da4, type: 3}
   resetScene: {fileID: 32414307}
   imagenFade: {fileID: 1276393864}
   speedFade: 2

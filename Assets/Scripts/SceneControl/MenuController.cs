@@ -9,8 +9,15 @@ public class MenuController : MonoBehaviour
     public void StartButton()
     {
         StartCoroutine(gm.BlackFadeIn());
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Level1");
     }
+
+    public void TutorialButton()
+    {
+        StartCoroutine(gm.BlackFadeIn());
+        SceneManager.LoadScene("LevelTutorial");
+    }
+
     public void RestartButton()
     {
         StartCoroutine(gm.BlackFadeIn());
@@ -23,6 +30,11 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
     
+    public void OptionsButton()
+    {
+
+    }
+    
     public void Button()
     {
 
@@ -30,6 +42,7 @@ public class MenuController : MonoBehaviour
 
     public void ExitButton()
     {
+        StartCoroutine(gm.BlackFadeIn());
         Application.Quit();
     }
 }

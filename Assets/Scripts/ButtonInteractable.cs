@@ -7,7 +7,7 @@ public class ButtonInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Button pressed!");
+        print("Button pressed!");
 
         foreach (GameObject obj in connectedObject)
         {

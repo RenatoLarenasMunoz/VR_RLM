@@ -88,12 +88,12 @@ public class GameManager : MonoBehaviour
         textEndLevel.SetActive(!textEndLevel.activeSelf);
         restartButton.SetActive(true);
 
-        //PlaySFX(2); // sonido no disponible
+        PlaySFX(2);
     }
 
     public void GameOver()
     {
-        //PlaySFX(3); // sonido no disponible
+        PlaySFX(3);
 
         StartCoroutine(BlackFadeIn());
         ResetLevel();
