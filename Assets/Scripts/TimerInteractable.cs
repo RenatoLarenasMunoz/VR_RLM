@@ -3,9 +3,10 @@ using UnityEngine;
 public class TimerInteractable : MonoBehaviour, IInteractable
 {
     public GameObject[] connectedObject;
+    public GameManager gm;
     bool isActive = false;
     public float timeLimit;
-    float timer;
+    [SerializeField] float timer;
 
     public void Interact()
     {
