@@ -41,8 +41,9 @@ Material:
     - _CellMovement: 4
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _XRMotionVectorsPass: 1
     m_Colors:
-    - _ColorObj: {r: 1, g: 0.78431374, b: 0, a: 0.3137255}
+    - _ColorObj: {r: 1, g: 0.627451, b: 0, a: 0.3137255}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7047923136214822393
