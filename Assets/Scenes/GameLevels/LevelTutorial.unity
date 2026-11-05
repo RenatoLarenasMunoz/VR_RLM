@@ -420,8 +420,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b396c45ac550e5341a69286744d62b0d, type: 3}
   - {fileID: 8300000, guid: f567c49edb9b0f74fb58bb76125d1da4, type: 3}
   resetScene: {fileID: 32414307}
-  imagenFade: {fileID: 0}
-  speedFade: 0
+  imagenFade: {fileID: 1247830171}
+  speedFade: 2
+  sceneIntex: 1
 --- !u!4 &607911024
 Transform:
   m_ObjectHideFlags: 0
@@ -804,6 +805,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2048985549522147579, guid: 5d9e88cf5e910cb4d8bc66928d4cf5d9, type: 3}
   m_PrefabInstance: {fileID: 1247830167}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1247830171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4795388942850411776, guid: 5d9e88cf5e910cb4d8bc66928d4cf5d9, type: 3}
+  m_PrefabInstance: {fileID: 1247830167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1255363316
 PrefabInstance:
   m_ObjectHideFlags: 0

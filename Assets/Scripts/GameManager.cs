@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public ResetScene resetScene;
     public Image imagenFade;
     public float speedFade;
-    //public Scene[] scenes;
+    public int sceneIntex;
 
 
 
@@ -101,7 +101,11 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene("Level1"); //buscar escena actual para reiniciar el nivel, incompleto
+        SceneManager.LoadScene(sceneIntex);
+    }
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(sceneIntex + 1);
     }
 
     public IEnumerator BlackFadeIn()

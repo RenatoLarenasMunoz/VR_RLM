@@ -9,5 +9,6 @@ public class ResetScene : MonoBehaviour, IInteractable
     public void Interact()
     {
         StartCoroutine(gm.BlackFadeIn());
+        gm.ResetLevel();
     }
 }

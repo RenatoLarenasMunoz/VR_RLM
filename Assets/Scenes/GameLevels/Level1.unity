@@ -3809,6 +3809,7 @@ MonoBehaviour:
   resetScene: {fileID: 32414307}
   imagenFade: {fileID: 1276393864}
   speedFade: 2
+  sceneIntex: 2
 --- !u!4 &607911024
 Transform:
   m_ObjectHideFlags: 0
@@ -7961,7 +7962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4736972110141568125, guid: 0975ecbdf6b53f84cbdae0ca700ab470, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4736972110141568125, guid: 0975ecbdf6b53f84cbdae0ca700ab470, type: 3}
       propertyPath: m_LocalPosition.y

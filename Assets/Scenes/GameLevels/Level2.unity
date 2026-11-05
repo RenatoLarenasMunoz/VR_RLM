@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7896579675071220476, guid: 65d389abd8d5b9a499ef23e7f9092601, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8407039740502968917, guid: 65d389abd8d5b9a499ef23e7f9092601, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1805,6 +1805,7 @@ MonoBehaviour:
   resetScene: {fileID: 32414307}
   imagenFade: {fileID: 1247830171}
   speedFade: 2
+  sceneIntex: 3
 --- !u!4 &607911024
 Transform:
   m_ObjectHideFlags: 0
@@ -1921,7 +1922,9 @@ MonoBehaviour:
   connectedObject:
   - {fileID: 574130146}
   - {fileID: 574130145}
-  timeLimit: 15
+  gm: {fileID: 607911023}
+  timeLimit: 5
+  timer: 0
 --- !u!1 &818809549
 GameObject:
   m_ObjectHideFlags: 0
