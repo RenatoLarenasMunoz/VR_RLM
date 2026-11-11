@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0c00a02e11fcdc44eb65ae60bba6af22, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -841,6 +841,7 @@ MonoBehaviour:
   resetScene: {fileID: 4253377}
   imagenFade: {fileID: 1659080602}
   speedFade: 2
+  sceneIntex: 0
 --- !u!4 &858127242
 Transform:
   m_ObjectHideFlags: 0
