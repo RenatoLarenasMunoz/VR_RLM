@@ -33,8 +33,8 @@ public class Interactor : MonoBehaviour
         {
             if(hitInfo.collider.TryGetComponent(out IInteractable interactable))
             {
-                Debug.Log(hitInfo);
                 interactable.Interact();
+                print(interactable);
             }
         }
     }

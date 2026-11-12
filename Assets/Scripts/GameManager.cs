@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     //public AudioClip[] music;
 
     [Header("Scene Manager Settings")]
-    public ResetScene resetScene;
     public Image imagenFade;
     public float speedFade;
     public int sceneIntex;
@@ -31,7 +30,10 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        restartButton.SetActive(false);
+        if(restartButton != null)
+        {
+            restartButton.SetActive(false);
+        }
         exitOn = false;
 
         foreach (GameObject icon in pieceIndicator)

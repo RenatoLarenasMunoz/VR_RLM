@@ -3,14 +3,18 @@ using UnityEngine;
 public class PieceInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] GameManager gm;
+    public GameObject[] objects;
 
 
     public void Interact()
     {
-        Debug.Log("Interaccion pieza");
+        print("Interaccion pieza");
 
         gm.CollectPiece();
-        this.gameObject.SetActive(!gameObject.activeSelf);
+        foreach (var item in objects)
+        {
+            item.SetActive(!item.activeSelf);
+        }
 
         Debug.Log("posees " + gm.piecesCollected + " piezas");
     }

@@ -56,6 +56,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceInteractable
   gm: {fileID: 0}
+  objects:
+  - {fileID: 2023959081474513213}
 --- !u!23 &3441663940834725010
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -184,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PieceInteractable
   gm: {fileID: 0}
+  objects: []
 --- !u!23 &1365005080153411376
 MeshRenderer:
   m_ObjectHideFlags: 0
