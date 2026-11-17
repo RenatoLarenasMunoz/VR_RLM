@@ -793,6 +793,7 @@ MonoBehaviour:
   exitOn: 0
   source: {fileID: 1335538051}
   clip: []
+  buttonClip: {fileID: 8300000, guid: ed0d04878387ccf4b96abb9da91ebd31, type: 3}
   imagenFade: {fileID: 1659080602}
   speedFade: 2
   sceneIntex: 0

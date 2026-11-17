@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("Sound Settings")]
     public AudioSource source;
     public AudioClip[] clip;
+    public AudioClip buttonClip;
     //public AudioClip[] music;
 
     [Header("Scene Manager Settings")]
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator BlackFadeIn()
     {
         float elapsedTime = 0;
+        source.PlayOneShot(buttonClip);
 
         while (elapsedTime < 1)
         {

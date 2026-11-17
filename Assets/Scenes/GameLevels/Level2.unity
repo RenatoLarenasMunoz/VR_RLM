@@ -2782,6 +2782,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 35fc92408265ad14fab83f38d3459a1a, type: 3}
   - {fileID: 8300000, guid: b396c45ac550e5341a69286744d62b0d, type: 3}
   - {fileID: 8300000, guid: f567c49edb9b0f74fb58bb76125d1da4, type: 3}
+  buttonClip: {fileID: 8300000, guid: ed0d04878387ccf4b96abb9da91ebd31, type: 3}
   imagenFade: {fileID: 1247830171}
   speedFade: 2
   sceneIntex: 3
@@ -3070,9 +3071,18 @@ MonoBehaviour:
   gm: {fileID: 607911023}
   timeLimit: 5
   timer: 0
+  source: {fileID: 738241893}
+  clip:
+  - {fileID: 8300000, guid: 88d83a89f377d34458b6bd0bc8fce658, type: 3}
+  - {fileID: 8300000, guid: 7329228ac3cdbe543b86ce2d94ca20da, type: 3}
 --- !u!4 &738241892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8407039740502968917, guid: 65d389abd8d5b9a499ef23e7f9092601, type: 3}
+  m_PrefabInstance: {fileID: 738241889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &738241893 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2415726782304148788, guid: 65d389abd8d5b9a499ef23e7f9092601, type: 3}
   m_PrefabInstance: {fileID: 738241889}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &818809549

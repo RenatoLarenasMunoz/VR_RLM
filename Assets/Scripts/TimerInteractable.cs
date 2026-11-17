@@ -8,6 +8,8 @@ public class TimerInteractable : MonoBehaviour, IInteractable
     bool isActive = false;
     public float timeLimit;
     [SerializeField] float timer;
+    public AudioSource source;
+    public AudioClip[] clip;
 
     private void Start()
     {
@@ -16,6 +18,7 @@ public class TimerInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        source.PlayOneShot(clip[0]);
         if (isActive) return;
         print("Button pressed! You have " + timeLimit + " seconds.");
         isActive = true;
@@ -40,6 +43,7 @@ public class TimerInteractable : MonoBehaviour, IInteractable
                 foreach (GameObject obj in connectedObject)
                 {
                     obj.SetActive(!obj.activeSelf);
+                    source.PlayOneShot(clip[1]);
                 }
             }
 

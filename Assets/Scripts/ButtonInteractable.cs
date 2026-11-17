@@ -4,6 +4,8 @@ public class ButtonInteractable : MonoBehaviour, IInteractable
 {
     //public GameObject connectedObject;
     public GameObject[] connectedObject;
+    public AudioSource source;
+    public AudioClip clip;
 
     public void Interact()
     {
@@ -13,5 +15,6 @@ public class ButtonInteractable : MonoBehaviour, IInteractable
         {
             obj.SetActive(!obj.activeSelf);
         }
+        source.PlayOneShot(clip);
     }
 }
