@@ -110,6 +110,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIntex + 1);
     }
+    public void LastLevel()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     public IEnumerator BlackFadeIn()
     {

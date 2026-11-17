@@ -7852,9 +7852,17 @@ PrefabInstance:
       propertyPath: gm
       value: 
       objectReference: {fileID: 607911023}
+    - target: {fileID: 1963067750550327757, guid: 7f65b4676492fac449aef595432208de, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2753402725536484045, guid: 7f65b4676492fac449aef595432208de, type: 3}
       propertyPath: m_Name
       value: LevelButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189928042049347035, guid: 7f65b4676492fac449aef595432208de, type: 3}
+      propertyPath: m_text
+      value: Return to Menu
       objectReference: {fileID: 0}
     - target: {fileID: 6104171472586247305, guid: 7f65b4676492fac449aef595432208de, type: 3}
       propertyPath: gm
@@ -7900,16 +7908,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9002879564648765798, guid: 7f65b4676492fac449aef595432208de, type: 3}
+      propertyPath: m_Name
+      value: EndButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9002879564648765798, guid: 7f65b4676492fac449aef595432208de, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1880620322}
   m_SourcePrefab: {fileID: 100100000, guid: 7f65b4676492fac449aef595432208de, type: 3}
 --- !u!1 &1880620320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2753402725536484045, guid: 7f65b4676492fac449aef595432208de, type: 3}
   m_PrefabInstance: {fileID: 1880620319}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1880620321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9002879564648765798, guid: 7f65b4676492fac449aef595432208de, type: 3}
+  m_PrefabInstance: {fileID: 1880620319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1880620322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880620321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a63e7067fbd3a24c89e45fffa7c2903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalLevelButton
+  gm: {fileID: 607911023}
 --- !u!1001 &1901616365
 PrefabInstance:
   m_ObjectHideFlags: 0
