@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class GameManager : MonoBehaviour
     public Canvas gameCanvas;
     public GameObject[] finishLine;
     public GameObject[] pieceIndicator;
+    public TextMeshProUGUI[] textLevel;
     public GameObject textInstruction;
+    int textIndex;
     public GameObject textEndLevel;
     public GameObject restartButton;
     public bool exitOn;
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
     public Image imagenFade;
     public float speedFade;
     public int sceneIntex;
+    bool levelComplete;
 
 
 
@@ -36,6 +40,7 @@ public class GameManager : MonoBehaviour
             restartButton.SetActive(false);
         }
         exitOn = false;
+        levelComplete = false;
 
         foreach (GameObject icon in pieceIndicator)
         {
@@ -53,8 +58,10 @@ public class GameManager : MonoBehaviour
 
         if (piecesCollected >= 3)
         {
+            textIndex = 0;
             piecesCollected = 3;
             ActivateExit();
+            StartCoroutine(TextFadeOut());
         }
 
         PlaySFX(0);
@@ -87,11 +94,17 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
-        textInstruction.SetActive(!textInstruction.activeSelf);
-        textEndLevel.SetActive(!textEndLevel.activeSelf);
-        restartButton.SetActive(true);
+        if (!levelComplete)
+        {
+            textIndex = 1;
+            textInstruction.SetActive(!textInstruction.activeSelf);
+            textEndLevel.SetActive(!textEndLevel.activeSelf);
+            restartButton.SetActive(true);
+            StartCoroutine(TextFadeOut());
 
-        PlaySFX(2);
+            PlaySFX(2);
+            levelComplete = true;
+        }
     }
 
     public void GameOver()
@@ -145,6 +158,24 @@ public class GameManager : MonoBehaviour
             float finalAlpha = Mathf.Lerp(1, 0, elapsedTime);
 
             imagenFade.color = new Color(0, 0, 0, finalAlpha);
+
+            yield return null;
+        }
+    }
+
+    public IEnumerator TextFadeOut()
+    {
+        float elapsedTime = 0;
+
+        yield return new WaitForSeconds(1f);
+
+        while (elapsedTime < 1)
+        {
+            elapsedTime += Time.deltaTime * speedFade;
+
+            float finalAlpha = Mathf.Lerp(1, 0, elapsedTime);
+
+            textLevel[textIndex].alpha = finalAlpha;
 
             yield return null;
         }

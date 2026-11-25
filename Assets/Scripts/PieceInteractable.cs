@@ -18,4 +18,9 @@ public class PieceInteractable : MonoBehaviour, IInteractable
 
         Debug.Log("posees " + gm.piecesCollected + " piezas");
     }
+
+    private void Update()
+    {
+        this.gameObject.transform.Rotate(Vector3.up);
+    }
 }
