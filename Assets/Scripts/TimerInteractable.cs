@@ -33,20 +33,22 @@ public class TimerInteractable : MonoBehaviour, IInteractable
     IEnumerator TimeActivation()
     {
         source.PlayOneShot(clip[1]);
+
         while (isActive)
         {
             timer -= Time.deltaTime;
 
             if (timer - 3 <= 0)
             {
-                source.Stop();
-                source.PlayOneShot(clip[2]);
+                source.pitch += Time.deltaTime * 0.2f;
             }
 
             if (timer <= 0)
             {
                 isActive = false;
+                source.Stop();
                 timer = timeLimit;
+                source.pitch = 1;
                 foreach (GameObject obj in connectedObject)
                 {
                     obj.SetActive(!obj.activeSelf);
